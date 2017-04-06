@@ -1,0 +1,13 @@
+---
+# vars file for dgnest.deployment (CentOS specific)
+
+_deployment_package_dependencies:
+  - build-essential
+
+
+_deployment_dependencies:
+  - name: build-essential
+    version: 1.0.0
+
+_deployment_packages:
+  - packages

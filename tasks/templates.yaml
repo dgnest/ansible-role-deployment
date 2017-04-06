@@ -1,0 +1,9 @@
+---
+# task for dgnest.deployment
+
+- name: copy templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items: _deployment.templates
+  when: _deployment.templates is defined
