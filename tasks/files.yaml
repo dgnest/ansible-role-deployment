@@ -1,0 +1,11 @@
+---
+# environment file for dgnest.deployment
+
+- name: Create files deployment
+  become: yes
+  file:
+    path: "{{ item.path }}"
+    state: "{{ item.state }}"
+    owner: "{{ item.owner }}"
+  with_items: _deployment_create_files
+  when: _deployment_create_files is defined

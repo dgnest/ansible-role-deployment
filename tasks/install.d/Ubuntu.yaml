@@ -1,0 +1,14 @@
+---
+
+# task file for dgnest.deployment
+
+- name: Ensure apt cache is up to date
+  apt:
+    update_cache: yes
+
+
+- name: Install deployment dependencies
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: _deployment_packages
+  tags:
+    - deployment

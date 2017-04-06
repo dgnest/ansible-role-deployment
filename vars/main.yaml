@@ -1,0 +1,14 @@
+---
+# vars file for dgnest.deployment
+
+# _dgnest.deployment_create_files:
+#   - path: "{{ _deploymnet.path_dir }}"
+#     state: "directory"
+#     # group: "root"
+#     owner: "{{ user }}"
+
+
+# _deployment:
+#   templates:
+#     - src: "default.j2"
+#       dest: {{ _deployment.deployment_file }}
