@@ -19,6 +19,10 @@
 
 - include: install.yaml
 
+- include: deploy.yaml
+
+- include: migrations.yaml
+
 - include: templates.yaml
 
 - include: environment.yaml

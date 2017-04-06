@@ -1,0 +1,14 @@
+---
+
+- name: Migrate database
+  become_user: "{{ deployment_user }}"
+  shell: ".  {{ deployment_pyenvrunrc }} &&
+        cd {{ deployment_path_application }} &&
+        python manage.py migrate_schemas"
+  register: migrate_database
+  when:
+    - deployment_pyenvrunrc is defined
+    - deployment_path_application is defined
+  tags:
+    - migrate
+    - apps

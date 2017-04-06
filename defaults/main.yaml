@@ -1,2 +1,13 @@
 ---
 # defaults file for dgnest.deployment
+
+deployment_user: "{{ user }}"
+deployment_pyenvrunrc: "/home/{{ deployment_user }}/.pyenvrunrc"
+deployment_path_application: ""
+# deployment_repositories:
+#   project:
+#     repo: ''
+#     location: ''
+#     version: ''
+
+# deployment_cronjobs:
